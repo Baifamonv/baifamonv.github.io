@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://baifamonv.github.io/2016/07/27/Android/index.html">
 <meta property="og:site_name" content="Simply Jane's Territory">
 <meta property="og:description" content="React Native Install Windows + AndroidDependencies for Windows + AndroidWell, I only have window pc on my hand. Ideally I would like to use Mac with android and ios install.Anyway while I am waiting f">
-<meta property="og:updated_time" content="2016-07-28T00:14:03.102Z">
+<meta property="og:updated_time" content="2016-07-28T00:17:21.806Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native Install Windows + Android">
 <meta name="twitter:description" content="React Native Install Windows + AndroidDependencies for Windows + AndroidWell, I only have window pc on my hand. Ideally I would like to use Mac with android and ios install.Anyway while I am waiting f">
@@ -178,25 +178,22 @@ react-native run-android
 </code></pre><ul>
 <li><p>failed to find build tools revision 23.0.0<br>The error massage would indicate what version of android sdk you should install.<br>you could go to SDK manager and click ‘Launch Standalone SDK manger’ and choose the tool you should install</p>
 </li>
-<li><p>2) Execution failed for task ‘:app:compileDebugJavaWithJavac’<br>Could not find tools.jar<br>solution: Setting the JAVA_HOME variable to C:\Program Files\Java\jdkX.XX<br>how:</p>
+<li><p>Execution failed for task ‘:app:compileDebugJavaWithJavac’<br>Could not find tools.jar<br>solution: Setting the JAVA_HOME variable to C:\Program Files\Java\jdkX.XX<br>how:</p>
 <p>1) go to Search bar and type in “environment” and click on “Edit the system environment variables”.</p>
 <p>2) click on “Environment Variables” button </p>
 <p>3) under System Variables heading, click “new”. Enter the name as JAVA_HOME and look up the path to the jdk.. Click OK and OK again. </p>
 <p>4) close your DOS window and open a new one</p>
 </li>
+</ul>
+</li>
 <li><p>com.android.builder.testing.api.DeviceException: No connected devices!</p>
-<p>start genymotion simulator would solve the problem</p>
+<p> start genymotion simulator would solve the problem</p>
 </li>
-<li><p>com.android.builder.testing.api.DeviceException: Timeout getting device list.</p>
-</li>
+<li><p>com.android.builder.testing.api.DeviceException: Timeout getting device list.<br>In Genymotion, go to Settings &gt; ADB (tab), Select radio option “Use custom Android SDK tools” and add the path to your local Android SDK</p>
+<p>Don’t forget to restart your emulator after you did the changes!</p>
+<h3 id="mouhhaaaa-It-works"><a href="#mouhhaaaa-It-works" class="headerlink" title="mouhhaaaa, It works!"></a>mouhhaaaa, It works!</h3></li>
 </ul>
-</li>
-</ul>
-<p>Solution:<br>  In Genymotion, go to Settings &gt; ADB (tab)<br> Select radio option “Use custom Android SDK tools” and add the path to your local Android SDK</p>
-<p> Don’t forget to restart your emulator after you did the changes</p>
-<p> ###mouhhaaaa, It works!</p>
-<p> ##In the future</p>
-<ol>
+<h2 id="In-the-future"><a href="#In-the-future" class="headerlink" title="In the future"></a>In the future</h2><ol>
 <li>cd AwesomeProject</li>
 <li>react-native run-android</li>
 </ol>
