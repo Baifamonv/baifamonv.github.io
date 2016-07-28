@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://baifamonv.github.io/2016/07/27/Android/index.html">
 <meta property="og:site_name" content="Simply Jane's Territory">
 <meta property="og:description" content="React Native Install Windows + AndroidDependencies for Windows + AndroidWell, I only have window pc on my hand. Ideally I would like to use Mac with android and ios install.Anyway while I am waiting f">
-<meta property="og:updated_time" content="2016-07-28T00:12:10.023Z">
+<meta property="og:updated_time" content="2016-07-28T00:14:03.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native Install Windows + Android">
 <meta name="twitter:description" content="React Native Install Windows + AndroidDependencies for Windows + AndroidWell, I only have window pc on my hand. Ideally I would like to use Mac with android and ios install.Anyway while I am waiting f">
@@ -160,31 +160,22 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <h1 id="React-Native-Install-Windows-Android"><a href="#React-Native-Install-Windows-Android" class="headerlink" title="React Native Install Windows + Android"></a>React Native Install Windows + Android</h1><h2 id="Dependencies-for-Windows-Android"><a href="#Dependencies-for-Windows-Android" class="headerlink" title="Dependencies for Windows + Android"></a>Dependencies for Windows + Android</h2><p>Well, I only have window pc on my hand. Ideally I would like to use Mac with android and ios install.<br>Anyway while I am waiting for android tool to download, I would like to share some my experience of install React Native.</p>
 <ul>
-<li>Node.js: Could be installed  by Chocolatey<blockquote>
-<p>choco install nodejs.install</p>
-</blockquote>
-</li>
+<li>Node.js: Could be installed  by Chocolatey<pre><code>choco install nodejs.install
+</code></pre></li>
 <li>Genymotion: Also need to install virtual machine</li>
 <li>androidstudio</li>
 </ul>
 <h2 id="Testing-your-React-Native-Installation"><a href="#Testing-your-React-Native-Installation" class="headerlink" title="Testing your React Native Installation"></a>Testing your React Native Installation</h2><ul>
-<li>install the React Native command line interface<blockquote>
-<p>npm install -g react-native-cli</p>
-</blockquote>
-</li>
-<li>initialize the project<blockquote>
-<p>react-native init AwesomeProject</p>
-</blockquote>
-</li>
+<li>install the React Native command line interface<pre><code>npm install -g react-native-cli
+</code></pre></li>
+<li>initialize the project<pre><code>react-native init AwesomeProject
+</code></pre></li>
 <li><p>Create a new project in android studio, copy local.properties file from new project folder to  android foler in AwesomeProject. (This process is vital which took me a lot of timi to figure out)</p>
 </li>
 <li><p>Testing and problem-solution:<br>firstly, you need to start genymotion simulator</p>
-</li>
-</ul>
-<blockquote>
-<p>cd AwesomeProject<br>react-native run-android</p>
-</blockquote>
-<ul>
+<pre><code>cd AwesomeProject
+react-native run-android
+</code></pre><ul>
 <li><p>failed to find build tools revision 23.0.0<br>The error massage would indicate what version of android sdk you should install.<br>you could go to SDK manager and click ‘Launch Standalone SDK manger’ and choose the tool you should install</p>
 </li>
 <li><p>2) Execution failed for task ‘:app:compileDebugJavaWithJavac’<br>Could not find tools.jar<br>solution: Setting the JAVA_HOME variable to C:\Program Files\Java\jdkX.XX<br>how:</p>
@@ -197,6 +188,8 @@ ga('send', 'pageview');
 <p>start genymotion simulator would solve the problem</p>
 </li>
 <li><p>com.android.builder.testing.api.DeviceException: Timeout getting device list.</p>
+</li>
+</ul>
 </li>
 </ul>
 <p>Solution:<br>  In Genymotion, go to Settings &gt; ADB (tab)<br> Select radio option “Use custom Android SDK tools” and add the path to your local Android SDK</p>
