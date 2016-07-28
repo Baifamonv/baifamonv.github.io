@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Simply Jane's Territory">
 <meta property="og:description" content="React Native Install Windows + AndroidDependencies for Windows + AndroidWell, I only have window pc on my hand. Ideally I would like to use Mac with android and ios install.Anyway while I am waiting f">
 <meta property="og:image" content="https://baifamonv.github.io/2016/07/27/Android/react_native.png">
-<meta property="og:updated_time" content="2016-07-28T02:04:14.175Z">
+<meta property="og:updated_time" content="2016-07-28T02:14:20.683Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native Install Windows + Android">
 <meta name="twitter:description" content="React Native Install Windows + AndroidDependencies for Windows + AndroidWell, I only have window pc on my hand. Ideally I would like to use Mac with android and ios install.Anyway while I am waiting f">
@@ -175,16 +175,13 @@ ga('send', 'pageview');
 <li>androidstudio</li>
 </ul>
 <h2 id="Testing-your-React-Native-Installation"><a href="#Testing-your-React-Native-Installation" class="headerlink" title="Testing your React Native Installation"></a>Testing your React Native Installation</h2><ul>
-<li>install the React Native command line interface<pre><code>npm install -g react-native-cli
-</code></pre></li>
-<li>initialize the project<pre><code>react-native init AwesomeProject
-</code></pre></li>
+<li>install the React Native command line interface<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g react-native-cli</div></pre></td></tr></table></figure></li>
+<li>initialize the project<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">react-native init AwesomeProject</div></pre></td></tr></table></figure></li>
 <li><p>Create a new project in android studio, copy local.properties file from new project folder to  android foler in AwesomeProject. (This process is vital which took me a lot of timi to figure out)</p>
 </li>
 <li><p>Testing and problem-solution:<br>firstly, you need to start genymotion simulator</p>
-<pre><code>cd AwesomeProject
-react-native run-android
-</code></pre><ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd AwesomeProject</div><div class="line">react-native run-android</div></pre></td></tr></table></figure>
+<ul>
 <li><p>failed to find build tools revision 23.0.0<br>The error massage would indicate what version of android sdk you should install.<br>you could go to SDK manager and click ‘Launch Standalone SDK manger’ and choose the tool you should install</p>
 </li>
 <li><p>Execution failed for task ‘:app:compileDebugJavaWithJavac’<br>Could not find tools.jar<br>solution: Setting the JAVA_HOME variable to C:\Program Files\Java\jdkX.XX<br>how:</p>
