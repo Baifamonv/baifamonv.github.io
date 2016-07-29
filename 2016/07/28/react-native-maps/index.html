@@ -20,7 +20,7 @@ I am using g">
 
 Run “android” and make sure every packages is updated.
 I am using g">
-<meta property="og:updated_time" content="2016-07-29T00:55:17.758Z">
+<meta property="og:updated_time" content="2016-07-29T01:18:19.167Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-native-maps'">
 <meta name="twitter:description" content="Install react-native-mapsInstall react-native-maps official siteyou could choose the above one or mine to install react-native-maps
@@ -186,7 +186,7 @@ Now close the device and restart it again<br>In case you accidentally close the 
 <li>“Google Play services has stopped”  will keep popping. don’t worry. just go to google play and update all apps.</li>
 </ul>
 </li>
-<li><p>Install the following packages :</p>
+<li><p>Install the following packages in android SDK manager :</p>
 <ul>
 <li>Extras / Google Play services</li>
 <li>Extras / Google Repository</li>
@@ -204,8 +204,12 @@ Now close the device and restart it again<br>In case you accidentally close the 
 </li>
 <li><p>Manual install</p>
 <ul>
-<li>in your file build.gradle add:<blockquote><p> dependencies {<br>  …<br>  compile ‘com.airbnb.android:react-native-maps:0.7.1’<br>}</p>
-</blockquote></li>
+<li>in your file build.gradle add:
+ dependencies {
+  ...
+  compile 'com.airbnb.android:react-native-maps:0.7.1'
+}
+ </li>
 <li>Add your API key to your manifest file:
 <application>
 
@@ -219,8 +223,20 @@ Now close the device and restart it again<br>In case you accidentally close the 
 <li>For React Native v0.29.0 or above:in your application object, add:</li>
 </ul>
 
-<p> public class MyApplication extends Application implements ReactApplication {<br>  private final ReactNativeHost reactNativeHost = new ReactNativeHost(this) {<br>    @Override protected List<reactpackage> getPackages() {<br>      return Arrays.asList(<br>          new MainReactPackage(),<br>          new MapsPackage());<br>    }<br>  };</reactpackage></p>
-<p>  @Override public ReactNativeHost getReactNativeHost() {<br>    return reactNativeHost;<br>  }<br>}<br>{% raw %}</p>
+ public class MyApplication extends Application implements ReactApplication {
+  private final ReactNativeHost reactNativeHost = new ReactNativeHost(this) {
+    @Override protected List<reactpackage> getPackages() {
+      return Arrays.asList(
+          new MainReactPackage(),
+          new MapsPackage());
+    }
+  };
+
+  @Override public ReactNativeHost getReactNativeHost() {
+    return reactNativeHost;
+  }
+}
+
 <h2 id="problems"><a href="#problems" class="headerlink" title="problems:"></a>problems:</h2><blockquote>
 <p>FAILURE: Build failed with an exception.<br>What went wrong:<br>A problem occurred configuring project ‘:app’.<br>Cannot evaluate module react-native-maps : Configuration with name ‘default’ not found.</p>
 </blockquote>
@@ -228,7 +244,7 @@ Now close the device and restart it again<br>In case you accidentally close the 
 <blockquote>
 <p>include ‘:react-native-maps:lib’<br>project(‘:react-native-maps’).projectDir = new File(rootProject.projectDir, ‘../node_modules/react-native-maps/android/lib’)</p>
 </blockquote>
-
+</reactpackage>
         </div>
         <footer class="article-footer">
             
