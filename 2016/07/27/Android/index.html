@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Simply Jane's Territory">
 <meta property="og:description" content="React Native Install Windows + AndroidDependencies for Windows + AndroidWell, I only have window pc on my hand. Ideally I would like to use Mac with android and ios install.Anyway while I am waiting f">
 <meta property="og:image" content="https://baifamonv.github.io/2016/07/27/Android/react_native.png">
-<meta property="og:updated_time" content="2016-07-28T02:16:09.066Z">
+<meta property="og:updated_time" content="2016-07-29T00:34:44.157Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native Install Windows + Android">
 <meta name="twitter:description" content="React Native Install Windows + AndroidDependencies for Windows + AndroidWell, I only have window pc on my hand. Ideally I would like to use Mac with android and ios install.Anyway while I am waiting f">
@@ -80,11 +80,11 @@ ga('send', 'pageview');
                                 </li>
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/Art">index.art</a>
+                                    <a class="main-nav-list-link" href="/Art/">index.art</a>
                                 </li>
                             
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/Tools">index.tools</a>
+                                    <a class="main-nav-list-link" href="/Tools/">index.tools</a>
                                 </li>
                             
                         </ul>
@@ -179,7 +179,7 @@ ga('send', 'pageview');
 <li>initialize the project<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">react-native init AwesomeProject</div></pre></td></tr></table></figure></li>
 <li><p>Create a new project in android studio, copy local.properties file from new project folder to  android foler in AwesomeProject. (This process is vital which took me a lot of timi to figure out)</p>
 </li>
-<li><p>Testing and problem-solution:<br>firstly, you need to start genymotion simulator</p>
+<li><p>Testing and problem-solution:<br>firstly, you need to start Genymotion virtual machine</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd AwesomeProject</div><div class="line">react-native run-android</div></pre></td></tr></table></figure>
 <ul>
 <li><p>failed to find build tools revision 23.0.0<br>The error massage would indicate what version of android sdk you should install.<br>you could go to SDK manager and click ‘Launch Standalone SDK manger’ and choose the tool you should install</p>
@@ -193,14 +193,23 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li><p>com.android.builder.testing.api.DeviceException: No connected devices!</p>
-<p> start genymotion simulator would solve the problem</p>
+<p> start Genymotion virtual machine would solve the problem</p>
 </li>
-<li><p>com.android.builder.testing.api.DeviceException: Timeout getting device list.<br>In Genymotion, go to Settings &gt; ADB (tab), Select radio option “Use custom Android SDK tools” and add the path to your local Android SDK</p>
+<li><p>com.android.builder.testing.api.DeviceException: Timeout getting device list.</p>
+<p>In Genymotion, go to Settings &gt; ADB (tab), Select radio option “Use custom Android SDK tools” and add the path to your local Android SDK</p>
 <p>Don’t forget to restart your emulator after you did the changes!</p>
+</li>
+<li><p>Warning:Gradle version 2.10 is required. Current version is 2.8. If using the gradle wrapper, try editing the distributionUrl in C:\Users\blahblah\myproject\gradle\wrapper\gradle-wrapper.properties to gradle-2.10-all.zip</p>
+<p>solution: open file Project\gradle\wrapper\gradle-wrapper.properties and edit field distributionUrl like this distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip<br>also you have to be sure you already have gradle 2.10 installed</p>
+</li>
+<li><p>In the new opened command window , “ERROR EPERM: operation not permitted, lstat….”</p>
+<p>Solution:just open node.js command by administration</p>
 <h3 id="mouhhaaaa-It-works"><a href="#mouhhaaaa-It-works" class="headerlink" title="mouhhaaaa, It works!"></a>mouhhaaaa, It works!</h3></li>
 </ul>
-<h2 id="In-the-future"><a href="#In-the-future" class="headerlink" title="In the future"></a>In the future</h2><ol>
+<h2 id="In-the-future"><a href="#In-the-future" class="headerlink" title="In the future"></a>In the future</h2><p>   open node.js command by administration!</p>
+<ol>
 <li>cd AwesomeProject</li>
+<li>make sure the following is running: Genymotion virtual machine ,</li>
 <li>react-native run-android</li>
 </ol>
 
@@ -323,6 +332,16 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
+        <a href="/2016/07/28/native/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            what make React Native special?
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2016/07/27/command-for-hexo/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -341,6 +360,46 @@ ga('send', 'pageview');
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/07/28/react-native-maps/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/07/28/react-native-maps/" class="title">react-native-maps&#39;</a></p>
+                            <p class="item-date"><time datetime="2016-07-29T00:32:47.000Z" itemprop="datePublished">2016-07-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/07/28/native/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/07/28/native/" class="title">what make React Native special?</a></p>
+                            <p class="item-date"><time datetime="2016-07-28T15:29:37.000Z" itemprop="datePublished">2016-07-28</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -414,7 +473,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -424,7 +483,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react native</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Install-react-native-maps/">Install react-native-maps</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React-Native/">React Native</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android-studio/">android studio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-native/">react native</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -434,7 +493,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/react-native/" style="font-size: 10px;">react native</a>
+            <a href="/tags/Install-react-native-maps/" style="font-size: 10px;">Install react-native-maps</a> <a href="/tags/React-Native/" style="font-size: 10px;">React Native</a> <a href="/tags/android-studio/" style="font-size: 10px;">android studio</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/react-native/" style="font-size: 10px;">react native</a>
         </div>
     </div>
 
