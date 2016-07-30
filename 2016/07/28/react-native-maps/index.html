@@ -20,7 +20,7 @@ I am using g">
 
 Run “android” and make sure every packages is updated.
 I am using g">
-<meta property="og:updated_time" content="2016-07-29T01:23:37.092Z">
+<meta property="og:updated_time" content="2016-07-29T17:06:48.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-native-maps'">
 <meta name="twitter:description" content="Install react-native-mapsInstall react-native-maps official siteyou could choose the above one or mine to install react-native-maps
@@ -196,7 +196,7 @@ Now close the device and restart it again<br>In case you accidentally close the 
 <li><p>Generate your SHA1 key</p>
 <ul>
 <li>cd C:\Program Files\Java\jdk1.8.0_77\bin where your keytool.exe exsit</li>
-<li>type  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -v -keystore my-release-key.keystore </div></pre></td></tr></table></figure> , type whatever info necessary,then file my-release-key.keystore will show in the root</li>
+<li>type  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -v -keystore &quot;%USERPROFILE%\.android\debug.keystore&quot; -alias androiddebugkey -storepass android -keypass android </div></pre></td></tr></table></figure> ,</li>
 <li>to show the key: type  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -keystore my-release-key.keystore</div></pre></td></tr></table></figure>. it would be like this “D8:AA:43:97:59:EE:C5:95:26:6A:07:EE:1C:37:8E:F4:F0:C8:05:C8”</li>
 <li>find your packname from file C:\Users[yourusername]\AwesomeProject\android\app\src\main\AndroidManifest.xml</li>
 <li>Go to <a href="https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend" target="_blank" rel="external">Google API Console</a> and select your project, or create one.Create a new key by clicking on Create credentials -&gt; API Key -&gt; Android Key,enter the name of the API key and your SHA1 key and create it. Then we get android API key</li>
@@ -217,7 +217,7 @@ Now close the device and restart it again<br>In case you accidentally close the 
 </li>
 </ol>
 <ul>
-<li>For React Native v0.29.0 or above:in your application object, add:
+<li>For React Native v0.29.0 or above:in your application object which located C:\Users[username]\getAwesome\android\app\src\main\java\com[projectName], add:
  public class MyApplication extends Application implements ReactApplication {
   private final ReactNativeHost reactNativeHost = new ReactNativeHost(this) {
     @Override protected List<reactpackage> getPackages() {
